@@ -1,14 +1,14 @@
 import React from "react";
 import { Form, Input, Button } from "antd";
 import { Link } from "react-router-dom";
-
+import Divider from "../../components/Divider";
 function Index() {
 
   return (
     <div className="grid grid-cols-2">
       <div className="bg-primary h-screen flex flex-col justify-center items-center">
         <div>
-          <h1 className="text-7xl text-white">SHEY-TRACKER</h1>
+          <h1 className="text-7xl text-white">PROJECT MANAGE</h1>
           <span className=" text-white mt-5">
             One place to track all your business records
           </span>
@@ -17,6 +17,7 @@ function Index() {
       <div className="flex justify-center items-center">
         <div className="w-[420px]">
           <h1 className="text-2xl text-gray-700">LOGIN TO YOUR ACCOUNT</h1>
+          <Divider />
           <Form layout="vertical">
             <Form.Item
               label="Email"
