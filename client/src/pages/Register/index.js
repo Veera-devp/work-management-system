@@ -1,8 +1,24 @@
 import React from 'react'
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button,message } from "antd";
 import { Link } from "react-router-dom";
 import Divider from "../../components/Divider";
+import { RegisterUser } from '../../apicalls/users';
 function index() {
+  const onFinish = async(values) =>
+  {
+    try {
+      const response = await RegisterUser(values);
+      if(response.success) {
+        message.success(response.message);
+      }
+      else{
+        throw new Error(response.message);
+      }
+    }
+    catch (error) {
+      console.log(error)
+    }
+  }
   return (
     <div className="grid grid-cols-2">
     <div className="bg-primary h-screen flex flex-col justify-center items-center">
