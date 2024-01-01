@@ -4,6 +4,8 @@ import ProtectedPage from "./components/ProtectedPage";
 import Spinner from "./components/Spinner";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import ProjectInfo from "./pages/ProjectInfo";
 import Register from "./pages/Register";
 
 function App() {
@@ -21,22 +23,22 @@ function App() {
               </ProtectedPage>
             }
           />
-          {/* <Route
+          <Route
             path="/project/:id"
             element={
               <ProtectedPage>
                 <ProjectInfo />
               </ProtectedPage>
             }
-          /> */}
-          {/* <Route
+          />
+          <Route
             path="/profile"
             element={
               <ProtectedPage>
                 <Profile />
               </ProtectedPage>
             }
-          /> */}
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
